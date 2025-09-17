@@ -270,7 +270,7 @@ This document is a curated collection of resources for learning about compiler c
 *   [PLDI](http://www.sigplan.org/Conferences/PLDI/)
 *   [POPL](http://www.sigplan.org/Conferences/POPL/)
 
-### 4.7. Resource Collections
+### 4.7. Other Notable Resource Collections (Inspiration for this)
 
 *   [Compilers and Interpreters by Phil Eaton](https://eatonphil.com/compilers-and-interpreters.html)
 *   [Programming Language Resources by Bernstein Bear](https://bernsteinbear.com/pl-resources/)
