@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compiler_Resources</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+
+    <style>
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.65;
+    margin: 0;
+    background-color: #fff;
+    font-size: 17px;
+    color: #444;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 10px 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.3;
+    color: #222;
+}
+h1 { font-size: 2.4em; }
+h2 { font-size: 2em; margin-top: 40px; }
+h3 { font-size: 1.6em; margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+h4 { font-size: 1.3em; margin-top: 20px; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #04AA6D;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* Code Styles */
+code, pre {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 0.92em;
+}
+pre {
+    background-color: #282c34;
+    color: #abb2bf;
+    padding: 14px;
+    border-radius: 5px;
+    overflow-x: auto;
+    line-height: 1.5;
+}
+:not(pre) > code {
+    background-color: #f1f1f1;
+    padding: 3px 6px;
+    border-radius: 4px;
+    color: #333;
+}
+pre code {
+    font-size: 1em;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    color: inherit;
+}
+
+/* General Styles */
+ul, ol { margin-top: 15px; margin-bottom: 15px; padding-left: 25px; }
+li { margin-bottom: 10px; }
+a { color: #04AA6D; text-decoration: none; font-weight: 600; }
+a:hover { text-decoration: underline; }
+strong { font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Compiler_Resources</h1>
+        <h1 id="compiler-and-jvm-resources">Compiler and JVM
+        Resources</h1>
+        <p>This document contains a curated list of resources for
+        learning about compiler construction, the Java Virtual Machine
+        (JVM), and related topics.</p>
+        <h2 id="general-compiler-construction">General Compiler
+        Construction</h2>
+        <ul>
+        <li><a href="https://dthain.github.io/books/compiler/">Compiler
+        Construction Book</a></li>
+        <li><a href="https://www3.nd.edu/~dthain/compilerbook/">The
+        Compiler Book by Daniel Thain</a></li>
+        <li><a href="https://compilerbook.com/">Compilerbook.com by Sam
+        Author</a></li>
+        <li><a href="https://interpreterbook.com/">Interpreterbook.com
+        by Sam Author</a></li>
+        <li><a href="https://compilers.iecc.com/crenshaw/">Let’s Build a
+        Compiler by Jack Crenshaw</a></li>
+        <li><a
+        href="https://news.ycombinator.com/item?id=36102865">Hacker
+        News: Compiler Construction</a></li>
+        <li><a
+        href="https://news.ycombinator.com/item?id=38331042">Hacker
+        News: Another Compiler Discussion</a></li>
+        <li><a
+        href="https://github.com/zakirullin/cognitive-load">Cognitive
+        Load in Programming</a></li>
+        <li><a
+        href="http://scheme2006.cs.uchicago.edu/11-ghuloum.pdf">An
+        Incremental Approach to Compiler Construction</a></li>
+        <li><a
+        href="https://github.com/IUCompilerCourse/Essentials-of-Compilation">Essentials
+        of Compilation: An Incremental Approach in Racket by Jeremy G.
+        Siek</a></li>
+        <li><a
+        href="https://austinhenley.com/blog/teenytinycompiler1.html">Let’s
+        Build a Teeny-Tiny Compiler</a></li>
+        <li><a href="https://www.cs.princeton.edu/~appel/modern/">Modern
+        Compiler Implementation in C</a></li>
+        <li><a
+        href="https://returnzero.win/2023/01/28/lisp-my-second-attempt-at-explaining-interpreters/">Lisp:
+        My Second Attempt at Explaining Interpreters</a></li>
+        <li><a
+        href="https://www.steveblackburn.org/pubs/papers/vmmagic-vee-2009.pdf">Metacircular
+        Virtual Machines</a></li>
+        <li><a
+        href="https://cs.brown.edu/courses/cs173/2012/book/">Programming
+        Languages: Application and Interpretation</a></li>
+        <li><a
+        href="https://smunix.github.io/dev.stephendiehl.com/fun/index.html">Write
+        You a Haskell</a></li>
+        <li><a
+        href="https://austinhenley.com/blog/mycomputingstory.html">My
+        Computing Story</a></li>
+        <li><a href="https://github.com/mingodad/cfront-3">Cfront
+        3.0.3</a></li>
+        <li><a href="https://github.com/seyko2/cfront-1">Cfront
+        1.2</a></li>
+        <li><a
+        href="https://bernsteinbear.com/pl-resources/">Programming
+        Language Resources</a></li>
+        <li><a
+        href="https://www.sanity.io/blog/why-we-wrote-yet-another-parser-compiler">Why
+        we wrote yet another parser-compiler</a></li>
+        <li><a
+        href="https://keleshev.com/compiling-to-assembly-from-scratch/">Compiling
+        to Assembly from Scratch</a></li>
+        <li><a
+        href="https://norasandler.com/2017/11/29/Write-a-Compiler.html">Write
+        a Compiler by Nora Sandler</a></li>
+        <li><a
+        href="https://sbaziotis.com/compilers/getting-started-with-compilers.html">Getting
+        Started with Compilers</a></li>
+        <li><a href="https://www.dabeaz.com/compiler.html">A Compiler
+        Writing Journey by David A. Wheeler</a></li>
+        </ul>
+        <h2 id="resource-collections">Resource Collections</h2>
+        <ul>
+        <li><a
+        href="https://eatonphil.com/compilers-and-interpreters.html">Compilers
+        and Interpreters by Phil Eaton</a></li>
+        <li><a
+        href="https://bernsteinbear.com/pl-resources/">Programming
+        Language Resources by Bernstein Bear</a></li>
+        <li><a href="https://c9x.me/compile/bib/">Resources for Amateur
+        Compiler Writers</a></li>
+        </ul>
+        <h2 id="jvm-internals-and-architecture">JVM Internals and
+        Architecture</h2>
+        <h3 id="bytecode">Bytecode</h3>
+        <ul>
+        <li><a
+        href="https://blog.jamesdbloom.com/JavaCodeToByteCode_PartOne.html">Java
+        Code to Byte Code: Part 1</a></li>
+        <li><a
+        href="https://jugbd.org/how-byte-codes-are-interpreted-by-jvm/">How
+        Bytecodes are Interpreted by JVM</a></li>
+        <li><a
+        href="https://www.infoq.com/articles/Java-Bytecode-Bending-the-Rules/">Bending
+        the Rules with Java Bytecode</a></li>
+        <li><a
+        href="https://www.coley.software/Recaf-documentation/use-bytecode-list.html">Recaf
+        Bytecode Documentation</a></li>
+        <li><a
+        href="https://www.reddit.com/r/java/comments/15aafuz/which_byte_code_instructions_are_considered_to_be/">Which
+        bytecode instructions are considered to be “wide”?</a></li>
+        <li><a
+        href="https://www.beyondjava.net/java-programmers-guide-java-byte-code">A
+        Java Programmer’s Guide to Bytecode</a></li>
+        <li><a
+        href="https://www.jrebel.com/blog/java-bytecode-tutorial">Java
+        Bytecode Tutorial</a></li>
+        <li><a
+        href="https://medium.com/swlh/an-introduction-to-jvm-bytecode-5ef3165fae70">An
+        Introduction to JVM Bytecode</a></li>
+        <li><a
+        href="https://medium.com/@nataliiadziubenko/jvm-bytecode-instructions-explained-41a3764dd141">JVM
+        Bytecode Instructions Explained</a></li>
+        <li><a
+        href="https://medium.com/@AlexanderObregon/an-introduction-to-java-bytecode-885677548674">An
+        Introduction to Java Bytecode</a></li>
+        <li><a
+        href="https://dzone.com/articles/introduction-to-java-bytecode">Introduction
+        to Java Bytecode</a></li>
+        <li><a
+        href="https://stackoverflow.com/questions/1552308/understanding-java-byte-code">Understanding
+        Java Byte Code</a></li>
+        <li><a
+        href="https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-4.html">The
+        Java Virtual Machine Specification, Java SE 7 Edition: Chapter
+        4</a></li>
+        <li><a
+        href="https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-6.html">The
+        Java Virtual Machine Specification, Java SE 7 Edition: Chapter
+        6</a></li>
+        </ul>
+        <h3 id="memory-management">Memory Management</h3>
+        <ul>
+        <li><a
+        href="https://www.pluralsight.com/courses/understanding-java-vm-memory-management">Understanding
+        the Java Virtual Machine: Memory Management
+        (Pluralsight)</a></li>
+        <li><a
+        href="https://medium.com/javarevisited/7-best-courses-to-learn-jvm-garbage-collection-and-performance-tuning-for-experienced-java-331705180686">7
+        Best Courses to Learn JVM Garbage Collection and Performance
+        Tuning</a></li>
+        <li><a
+        href="https://www.digitalocean.com/community/tutorials/java-jvm-memory-model-memory-management-in-java">Java
+        Memory Management Explained (DigitalOcean)</a></li>
+        <li><a
+        href="https://www.geeksforgeeks.org/java/java-memory-management/">Java
+        Memory Management (GeeksforGeeks)</a></li>
+        <li><a href="https://www.baeldung.com/java-stack-heap">Java
+        Stack and Heap (Baeldung)</a></li>
+        <li><a
+        href="https://www.infoworld.com/article/2165977/how-the-java-virtual-machine-handles-exceptions.html">How
+        the Java virtual machine handles exceptions</a></li>
+        <li><a
+        href="https://man7.org/linux/man-pages/man2/mmap.2.html">mmap(2)
+        - Linux manual page</a></li>
+        <li><a
+        href="https://github.com/chrisseaton/rhizome/blob/main/doc/memory.md">Rhizome
+        Memory Management</a></li>
+        <li><a
+        href="https://github.com/chrisseaton/rhizome/blob/main/lib/rhizomeruby/memory.rb#L72">RhizomeRuby
+        Memory</a></li>
+        <li><a
+        href="https://github.com/chrisseaton/rhizome">Rhizome</a></li>
+        </ul>
+        <h2 id="jvm-tools">JVM Tools</h2>
+        <h3 id="decompilers">Decompilers</h3>
+        <ul>
+        <li><strong>JD-GUI:</strong> Classic GUI decompiler.</li>
+        <li><strong>CFR:</strong> Modern, well-maintained
+        decompiler.</li>
+        <li><strong>Procyon:</strong> Good for Java 8+ features like
+        lambdas.</li>
+        <li><strong>FernFlower:</strong> IntelliJ’s built-in
+        decompiler.</li>
+        <li><strong>JADX:</strong> Mainly for Android DEX → Java, but
+        works for JVM too.</li>
+        <li><strong>Bytecode-Viewer:</strong> Combines multiple
+        decompilers (JD-GUI, CFR, Procyon, FernFlower).</li>
+        </ul>
+        <h3 id="assemblers-and-disassemblers">Assemblers and
+        Disassemblers</h3>
+        <ul>
+        <li><strong>javap:</strong> Comes with JDK, disassembles .class
+        to readable bytecode.</li>
+        <li><strong>Jasmin:</strong> Assembler for JVM bytecode (you
+        write .j files).
+        <ul>
+        <li><a href="https://jasmin.sourceforge.net/guide.html">Jasmin
+        Guide</a></li>
+        <li><a href="https://github.com/momohatt/jasmin-example">Jasmin
+        Example</a></li>
+        <li><a
+        href="https://stackoverflow.com/questions/39480167/jasmin-jvm-setup-on-mac-osx">Jasmin
+        JVM Setup on macOS</a></li>
+        </ul></li>
+        <li><strong>Krakatau:</strong> Powerful assembler/disassembler
+        for .class and DEX.</li>
+        <li><strong>Soot:</strong> Framework for analyzing &amp;
+        transforming bytecode.</li>
+        <li><strong>BCEL:</strong> Apache Byte Code Engineering
+        Library.</li>
+        <li><strong>jasm:</strong> A Java assembler.
+        (https://github.com/roscopeco/jasm)</li>
+        </ul>
+        <h3 id="bytecode-engineering-libraries">Bytecode Engineering
+        Libraries</h3>
+        <ul>
+        <li><strong>ASM:</strong> Low-level bytecode manipulation
+        framework. (https://asm.ow2.io/)</li>
+        <li><strong>Javassist:</strong> High-level API for runtime
+        bytecode generation. (https://www.javassist.org/)</li>
+        <li><strong>Byte Buddy:</strong> Modern and powerful library for
+        runtime code generation. (https://bytebuddy.net/)</li>
+        </ul>
+        <h3 id="debugging-and-profiling-tools">Debugging and Profiling
+        Tools</h3>
+        <ul>
+        <li><strong>VisualVM:</strong> Profiler + heap/thread analyzer.
+        (https://visualvm.github.io/)</li>
+        <li><strong>JDK Mission Control (JMC):</strong> Production-grade
+        monitoring &amp; profiling.
+        (https://openjdk.org/projects/jmc/)</li>
+        <li><strong>Java Flight Recorder (JFR):</strong> Low-overhead
+        profiler built into the JVM.
+        (https://docs.oracle.com/en/java/javase/17/jfapi/)</li>
+        <li><strong>Async Profiler:</strong> Sampling CPU &amp;
+        allocation profiler.
+        (https://github.com/jvm-profiling-tools/async-profiler)</li>
+        <li><strong>Arthas:</strong> Alibaba’s JVM diagnostic tool.
+        (https://arthas.aliyun.com/en/)</li>
+        <li><strong>Jol (Java Object Layout):</strong> Analyze object
+        memory layout in JVM.
+        (https://openjdk.org/projects/code-tools/jol/)</li>
+        <li><strong>jdb:</strong> Java Debugger (comes with JDK,
+        command-line).</li>
+        <li><strong>Eclipse Memory Analyzer (MAT):</strong> Heap dump
+        analyzer.</li>
+        <li><strong>IntelliJ IDEA Debugger:</strong> Full-featured JVM
+        debugger.</li>
+        <li><strong>HotswapAgent:</strong> Reloads class changes at
+        runtime.</li>
+        <li><strong>Byteman:</strong> Injects rules into JVM for
+        debugging/tracing.</li>
+        <li><strong>BTrace:</strong> Safe dynamic tracing of JVM
+        apps.</li>
+        </ul>
+        <h2 id="jvm-based-compiler-projects">JVM-Based Compiler
+        Projects</h2>
+        <ul>
+        <li><strong>Tiny Java Compiler:</strong> C++ frontend → Jasmin
+        bytecode. (https://github.com/hehez/Tiny-Java-Compiler)</li>
+        <li><strong>MiniJava Compiler (JavaCC):</strong> Minimalist Java
+        compiler in Java using JavaCC.
+        (https://github.com/BlackyDrum/mini-java-compiler)</li>
+        <li><strong>Extended MiniJava Compiler (JFlex +
+        Jasmin):</strong> Full front-end and optimizations.
+        (https://github.com/bhavinshah7/Mini-Java-Compiler)</li>
+        <li><strong>C/C++ Mini-Java Compiler:</strong> Implemented in
+        C/C++; uses flex, recursive &amp; non-recursive LL(1) and LALR
+        parsing. (https://github.com/greati/mini-java-compiler)</li>
+        <li><strong>TinyJ:</strong> Parses a tiny subset of Java.
+        (https://github.com/harry1357931/TinyJava-ParseTree-Compiler-execute_VMcode)</li>
+        <li><strong>Java-based MiniJava to LLVM:</strong> Compiles
+        MiniJava to LLVM IR.
+        (https://github.com/vsakkas/minijava-compiler)</li>
+        <li><a
+        href="https://github.com/arturo182/tinyjava">tinyjava</a></li>
+        </ul>
+        <h2 id="alternative-jvms-and-related-languages">Alternative JVMs
+        and Related Languages</h2>
+        <h3 id="jvm-alternatives">JVM Alternatives</h3>
+        <ul>
+        <li><strong>Jikes RVM:</strong> Research JVM written in Java.
+        (https://github.com/JikesRVM/JikesRVM)</li>
+        <li><strong>Maxine VM:</strong> Meta-circular JVM from Oracle
+        Labs. (https://github.com/beehive-lab/Maxine-VM)</li>
+        <li><strong>Cacao JVM:</strong> Lightweight, research JVM
+        written in C++. (http://www.cacaovm.org/)</li>
+        <li><strong>GraalVM:</strong> Polyglot VM.
+        (https://www.graalvm.org/)</li>
+        <li><strong>JamVM:</strong>
+        (https://jamvm.sourceforge.net/)</li>
+        <li><strong>TakaTuka:</strong>
+        (https://en.wikipedia.org/wiki/TakaTuka)</li>
+        <li><strong>PreonVM:</strong>
+        (https://en.m.wikipedia.org/wiki/PreonVM)</li>
+        <li><strong>IKVM.NET:</strong>
+        (https://en.m.wikipedia.org/wiki/IKVM)</li>
+        <li><strong>LeJOS:</strong>
+        (https://en.m.wikipedia.org/wiki/LeJOS)</li>
+        <li><strong>NanoVM:</strong>
+        (http://harbaum.org/till/nanovm/index.shtml)</li>
+        <li><strong>Mika VM:</strong>
+        (https://en.m.wikipedia.org/wiki/Mika_VM)</li>
+        <li><strong>Kaffe:</strong> (http://www.kaffe.org/)</li>
+        </ul>
+        <h3 id="other-languages-and-compilers">Other Languages and
+        Compilers</h3>
+        <ul>
+        <li><strong>Forth:</strong>
+        <ul>
+        <li><a href="https://github.com/phf/forth">JonesForth</a></li>
+        </ul></li>
+        <li><strong>J:</strong>
+        <ul>
+        <li><a href="https://www.cs.umb.edu/j--/">J Programming
+        Language</a></li>
+        </ul></li>
+        <li><strong>Oberon:</strong>
+        <ul>
+        <li><a
+        href="https://people.inf.ethz.ch/wirth/index.html">Wirth’s Home
+        Page</a></li>
+        <li><a
+        href="https://people.inf.ethz.ch/wirth/CompilerConstruction/">Wirth’s
+        Compiler Page with code</a></li>
+        <li><a
+        href="https://web.archive.org/web/20230120051556/http://www.projectoberon.com/">Project
+        Oberon</a></li>
+        <li><a href="https://archive.ph/2lMca">Project Oberon
+        (Archive)</a></li>
+        <li><a
+        href="http://oberon2005.oberoncore.ru/paper/p_ao.pdf">Active
+        Oberon</a></li>
+        <li><a
+        href="https://people.inf.ethz.ch/wirth/Oberon/Oberon.Report.pdf">Oberon
+        Language Report</a></li>
+        <li><a href="https://github.com/schierlm/OberonEmulator">Oberon
+        Emulator</a></li>
+        <li><a
+        href="https://github.com/lboasso/oberonc">oberonc</a></li>
+        <li><a
+        href="http://pascal.hansotten.com/niklaus-wirth/school-of-wirth/">The
+        School of Niklaus Wirth: The Art of Simplicity</a></li>
+        </ul></li>
+        <li><strong>Pascal:</strong>
+        <ul>
+        <li><a href="https://www.freepascal.org/">Free Pascal</a></li>
+        <li><a href="https://turbopascal.org/compiler">Turbo Pascal
+        Compiler</a></li>
+        </ul></li>
+        <li><strong>Cfront:</strong>
+        <ul>
+        <li><a href="https://github.com/mingodad/cfront-3">Cfront
+        3.0.3</a></li>
+        <li><a href="https://github.com/seyko2/cfront-1">Cfront
+        1.2</a></li>
+        </ul></li>
+        <li><strong>K Lang (Arthur Whitney):</strong>
+        <ul>
+        <li><a href="https://shakti.com/edu">Shakti K Education</a></li>
+        <li><a href="https://xpqz.github.io/kbook/Introduction.html">K
+        Book</a></li>
+        <li><a href="https://github.com/kparc/ksimple">ksimple
+        GitHub</a></li>
+        <li><a
+        href="https://news.ycombinator.com/item?id=39026551">Hacker News
+        Discussion 1</a></li>
+        <li><a
+        href="https://news.ycombinator.com/item?id=38868574">Hacker News
+        Discussion 2</a></li>
+        </ul></li>
+        <li><strong>T3X:</strong>
+        <ul>
+        <li><a href="http://t3x.org/t3x/book.html">T3X Language</a></li>
+        <li><a href="http://t3x.org/reload/index.html">T3X
+        Reloaded</a></li>
+        </ul></li>
+        <li><strong>Renjin:</strong> (https://www.renjin.org/)</li>
+        <li><strong>Python JVM Interpreter:</strong>
+        (https://github.com/gkbrk/python-jvm-interpreter)</li>
+        <li><strong>BoxLang:</strong>
+        (https://boxlang.ortusbooks.com/)</li>
+        <li><strong>GCJ (GNU Compiler for Java):</strong>
+        <ul>
+        <li><a href="https://github.com/Zopolis4/gcj">GCJ</a></li>
+        <li><a
+        href="https://objectcomputing.com/resources/publications/sett/january-2003-gcj-the-gnu-compiler-for-java">January
+        2003 - GCJ: The GNU Compiler for Java</a></li>
+        </ul></li>
+        </ul>
+        <h2 id="code-obfuscation">Code Obfuscation</h2>
+        <ul>
+        <li><a
+        href="https://en.m.wikipedia.org/wiki/International_Obfuscated_C_Code_Contest">The
+        International Obfuscated C Code Contest (IOCCC)</a></li>
+        <li><a href="https://www.ioccc.org/years.html">IOCCC
+        Winners</a></li>
+        </ul>
+        <h2 id="further-reading-and-videos">Further Reading and
+        Videos</h2>
+        <h3 id="articles-and-blog-posts">Articles and Blog Posts</h3>
+        <ul>
+        <li><a href="https://faultlore.com/blah/c-isnt-a-language/">C
+        Isn’t a Programming Language Anymore</a></li>
+        <li><a href="https://norvig.com/lispy.html">(How to Write a
+        (Lisp) Interpreter (in Python))</a></li>
+        <li><a href="https://github.com/kanaka/mal">mal - Make a
+        Lisp</a></li>
+        <li><a
+        href="https://notes.eatonphil.com/parser-generators-vs-handwritten-parsers-survey-2021.html">Parser
+        Generators vs. Handwritten Parsers: A Survey of 2021</a></li>
+        <li><a
+        href="https://mottaquikarim.github.io/dev/posts/hacking-python-with-spells-from-harry-potter/">Hacking
+        Python with Spells from Harry Potter</a></li>
+        <li><a href="https://avi.im/blag/2021/rc-day-24/">RC Day 24: A
+        tiny VM</a></li>
+        <li><a
+        href="https://webkit.org/blog/189/announcing-squirrelfish/">Announcing
+        SquirrelFish</a></li>
+        <li><a href="https://wingolog.org/">wingolog</a></li>
+        <li><a
+        href="https://search.brave.com/search?q=compile+time+type+vs+runtime+type&amp;source=android&amp;summary=1&amp;conversation=ac116b7b39bbb6b89e5e7a">Compile-time
+        vs. Run-time Type</a></li>
+        <li><a
+        href="https://stackoverflow.com/questions/14963943/what-is-the-difference-between-a-compile-time-type-vs-run-time-type-for-any-obje">What
+        is the difference between a compile-time type vs run-time type
+        for any object?</a></li>
+        <li><a
+        href="https://www.baeldung.com/cs/runtime-vs-compile-time">Runtime
+        vs. Compile Time</a></li>
+        <li><a
+        href="https://www.simplilearn.com/entity-component-system-introductory-guide-article">Entity
+        Component System (ECS) Introduction</a></li>
+        <li><a
+        href="https://www.reddit.com/r/roguelikedev/comments/a1ssfz/how_to_design_an_ecs_in_java/">How
+        to design an ECS in Java</a></li>
+        <li><a
+        href="https://foojay.io/today/compiling-java-code-executing-%20bytecode/">Compiling
+        Java Code, Executing Bytecode</a></li>
+        <li><a
+        href="https://www.geeksforgeeks.org/dsa/building-heap-from-array/">Building
+        a Heap from an Array</a></li>
+        <li><a
+        href="https://medium.com/%40saikadali/building-your-own-jvm-interpreter-from-scratch-86a085e225b1">Building
+        your own JVM Interpreter from Scratch</a></li>
+        <li><a
+        href="https://medium.com/@saikadali/why-we-need-different-jvms-f40a177e6e48">Why
+        we need different JVMs</a></li>
+        </ul>
+        <h3 id="videos">Videos</h3>
+        <ul>
+        <li><a
+        href="https://www.youtube.com/playlist?list=PLWUx_XkUoGTq-nkbhnk6PN4m109ISo5BX">Natalie
+        Language</a></li>
+        <li><a
+        href="https://www.youtube.com/watch?v=3RO1Jtve6v8&amp;list=PLMOpZvQB55bf2J-TgMOejaViKhN_VkPdE">Jakt
+        Language Hacking</a></li>
+        <li><a
+        href="https://www.youtube.com/playlist?list=PLMOpZvQB55beChggmvk-sUm8X_vSezpqL">JS
+        Bytecode VM</a></li>
+        <li><a href="https://www.youtube.com/watch?v=q7Q7_ex2KuE">JVM
+        Debugging</a></li>
+        <li><a href="https://www.youtube.com/watch?v=LBQjLeqJmwc">JVM
+        Debugging with IntelliJ</a></li>
+        <li><a href="https://www.youtube.com/watch?v=N4mbCUh65_4">Java
+        Debugging in VS Code</a></li>
+        <li><a href="https://www.youtube.com/watch?v=sEEdBLhszuk">Java
+        Debugging</a></li>
+        <li><a
+        href="https://www.youtube.com/watch?v=ZID0IJiOJdE">Understanding
+        Java Bytecode</a></li>
+        <li><a href="https://www.youtube.com/watch?v=mE0oR9NQefw">Java
+        Bytecode Explained</a></li>
+        <li><a href="https://www.youtube.com/watch?v=8pfixE9aM3Y">JVM
+        Anatomy Park</a></li>
+        <li><a
+        href="https://www.youtube.com/watch?v=cijr3ARKtxo">Introduction
+        to JVM Internals</a></li>
+        <li><a href="https://www.youtube.com/watch?v=5mvQOScXDl0">G1
+        Garbage Collector</a></li>
+        <li><a href="https://www.youtube.com/watch?v=5_eAJNg4PfI">Java
+        Memory Model</a></li>
+        <li><a href="https://www.youtube.com/watch?v=4vIKbXb8V7k">Java
+        Performance Tuning</a></li>
+        <li><a href="https.youtube.com/watch?v=BeMi8K0AFAc">The Future
+        of the JVM</a></li>
+        <li><a href="https://www.youtube.com/watch?v=ZMjYbnkUYkA">JVM as
+        a Language Platform</a></li>
+        <li><a
+        href="https://www.youtube.com/watch?v=VYo3p4R66N8">Adventures in
+        JIT compilation</a></li>
+        <li><a
+        href="https://www.youtube.com/watch?v=e2zmmkc5xI0">Compiler vs
+        Interpreter</a></li>
+        <li><a href="https://www.youtube.com/watch?v=2-iCwCrvbQk">How a
+        Compiler Works in 10 Minutes</a></li>
+        <li><a
+        href="https://www.youtube.com/watch?v=7l9i8Ku2IiY">Creating a
+        Programming Language</a></li>
+        <li><a href="https://www.youtube.com/watch?v=pWOTpGyVv64">Let’s
+        Write a Compiler</a></li>
+        <li><a
+        href="https://www.youtube.com/watch?v=rPyqB1l4gko">Compiler
+        Design</a></li>
+        <li><a href="https://www.youtube.com/watch?v=U63CCB7Itr8">How Do
+        Compilers Work?</a></li>
+        </ul>
+    </div>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

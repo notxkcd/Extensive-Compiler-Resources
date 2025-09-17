@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++_Compiler_Resources</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+
+    <style>
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.65;
+    margin: 0;
+    background-color: #fff;
+    font-size: 17px;
+    color: #444;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 10px 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.3;
+    color: #222;
+}
+h1 { font-size: 2.4em; }
+h2 { font-size: 2em; margin-top: 40px; }
+h3 { font-size: 1.6em; margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+h4 { font-size: 1.3em; margin-top: 20px; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #04AA6D;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* Code Styles */
+code, pre {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 0.92em;
+}
+pre {
+    background-color: #282c34;
+    color: #abb2bf;
+    padding: 14px;
+    border-radius: 5px;
+    overflow-x: auto;
+    line-height: 1.5;
+}
+:not(pre) > code {
+    background-color: #f1f1f1;
+    padding: 3px 6px;
+    border-radius: 4px;
+    color: #333;
+}
+pre code {
+    font-size: 1em;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    color: inherit;
+}
+
+/* General Styles */
+ul, ol { margin-top: 15px; margin-bottom: 15px; padding-left: 25px; }
+li { margin-bottom: 10px; }
+a { color: #04AA6D; text-decoration: none; font-weight: 600; }
+a:hover { text-decoration: underline; }
+strong { font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>C++_Compiler_Resources</h1>
+        <h1 id="c-compiler-resources">C++ Compiler Resources</h1>
+        <p><strong>See also:</strong></p>
+        <ul>
+        <li><a href="assembly.arm.md">Assembly (Arm)</a></li>
+        <li><a href="assembly.riscv.md">Assembly (RISC-V)</a></li>
+        <li><a href="assembly.x86.md">Assembly (x86)</a></li>
+        <li><a href="compilers.correctness.md">Compilers
+        Correctness</a></li>
+        <li><a
+        href="https://github.com/MattPD/cpplinks/blob/master/debugging.md">Debugging</a>:
+        <a
+        href="https://github.com/MattPD/cpplinks/blob/master/debugging.md#implementation">Implementation</a></li>
+        <li><a
+        href="https://gist.github.com/MattPD/00573ee14bf85ccac6bed3c0678ddbef">Program
+        Analysis</a> - <a
+        href="https://gist.github.com/MattPD/00573ee14bf85ccac6bed3c0678ddbef#llvm">LLVM</a></li>
+        <li><a
+        href="https://github.com/MattPD/cpplinks/blob/master/executables.linking_loading.md">Linking
+        and Loading</a></li>
+        </ul>
+        <hr />
+        <h1 id="background">Background</h1>
+        <ul>
+        <li><a
+        href="https://github.com/aalhour/awesome-compilers">awesome-compilers</a></li>
+        <li>A Compiler Writing Journey
+        <ul>
+        <li>https://github.com/DoctorWkt/acwj</li>
+        </ul></li>
+        <li>An Incremental Approach to Compiler Construction
+        <ul>
+        <li>Scheme and Functional Programming 2006; Abdulaziz
+        Ghuloum</li>
+        <li>http://scheme2006.cs.uchicago.edu/11-ghuloum.pdf</li>
+        <li>Step-by-step development of a Scheme-to-x86 compiler
+        <ul>
+        <li>https://github.com/namin/inc</li>
+        </ul></li>
+        </ul></li>
+        <li>ChocoPy: A Programming Language for Compilers Courses
+        <ul>
+        <li>SPLASH-E 2019; Rohan Padhye, Koushik Sen, Paul N.
+        Hilfinger</li>
+        <li>https://chocopy.org/</li>
+        <li>https://chocopy.org/chocopy-splashe19.pdf</li>
+        <li>https://chocopy.org/chocopy-splashe19-slides.pdf</li>
+        </ul></li>
+        <li>Computer Language Notes: Compilers and Interpreters
+        <ul>
+        <li>https://github.com/melling/ComputerLanguages/blob/master/compilers.md</li>
+        </ul></li>
+        <li>Let’s Build A Simple Interpreter -
+        https://ruslanspivak.com/lsbasi-part1/</li>
+        <li>Notes on Graph Algorithms Used in Optimizing Compilers -
+        Carl Offner
+        <ul>
+        <li>http://www.cs.umb.edu/~offner/files/flow_graph.pdf</li>
+        </ul></li>
+        <li>Resources for Amateur Compiler Writers
+        <ul>
+        <li>http://c9x.me/compile/bib/</li>
+        </ul></li>
+        </ul>
+        <h2 id="books">Books</h2>
+        <ul>
+        <li>Crafting Interpreters
+        <ul>
+        <li>Bob Nystrom</li>
+        <li>http://craftinginterpreters.com/</li>
+        <li>https://github.com/munificent/craftinginterpreters</li>
+        </ul></li>
+        <li>Essentials of Compilation: An Incremental Approach
+        <ul>
+        <li>A book about compiling Racket to x86-64 assembly</li>
+        <li>Jeremy G. Siek, Ryan R. Newton</li>
+        <li>https://github.com/IUCompilerCourse/Essentials-of-Compilation</li>
+        <li>Teaching and Learning Compilers Incrementally
+        <ul>
+        <li>ICFP 2023 Tutorial</li>
+        <li>Jeremy G. Siek</li>
+        <li>https://www.youtube.com/watch?v=UJURb9H_q3A</li>
+        <li>https://iucompilercourse.github.io/tutorial-web-page/</li>
+        <li>https://icfp23.sigplan.org/details/icfp-2023-tutorials/2/Teaching-and-Learning-Compilers-Incrementally</li>
+        </ul></li>
+        </ul></li>
+        <li>GCC Wiki - List of compiler books
+        <ul>
+        <li>https://gcc.gnu.org/wiki/ListOfCompilerBooks</li>
+        </ul></li>
+        <li>Introduction to Compilers and Language Design
+        <ul>
+        <li>Douglas Thain</li>
+        <li>http://compilerbook.org/</li>
+        </ul></li>
+        <li>Jordan Rose (Swift team) recommendations
+        <ul>
+        <li>http://belkadan.com/blog/2015/11/Recommendations/</li>
+        </ul></li>
+        <li>Instruction Selection
+        <ul>
+        <li>Instruction Selection: Principles, Methods, &amp;
+        Applications
+        <ul>
+        <li>2016 Book; Gabriel Hjort Blindell</li>
+        <li>http://kth.diva-portal.org/smash/record.jsf?pid=diva2:951540</li>
+        </ul></li>
+        <li>Universal Instruction Selection
+        <ul>
+        <li>2018 PhD Dissertation; Gabriel Hjort Blindell</li>
+        <li>http://www.diva-portal.org/smash/record.jsf?pid=diva2:1185339</li>
+        <li>https://github.com/gablin/ghb-thesis</li>
+        <li>https://github.com/gablin/ghb-thesis/blob/master/ghb-thesis.pdf</li>
+        </ul></li>
+        </ul></li>
+        <li>Static Single Assignment (SSA) Book
+        <ul>
+        <li>draft:
+        <ul>
+        <li>http://web.archive.org/http://ssabook.gforge.inria.fr/latest/book-full.pdf</li>
+        <li>GitHub Mirror
+        <ul>
+        <li>https://github.com/pfalcon/ssabook</li>
+        <li>PDF: https://pfalcon.github.io/ssabook/latest/</li>
+        </ul></li>
+        </ul></li>
+        <li>SSA-based Compiler Design
+        <ul>
+        <li>2022; Fabrice Rastello, Florent Bouchez Tichadou</li>
+        <li>https://link.springer.com/book/9783030805142</li>
+        </ul></li>
+        </ul></li>
+        </ul>
+        <h2 id="llvm">LLVM</h2>
+        <ul>
+        <li>A Tourist’s Guide to the LLVM Source Code -
+        http://blog.regehr.org/archives/1453</li>
+        <li>How Clang Compiles a Function -
+        https://blog.regehr.org/archives/1605</li>
+        <li>How LLVM Optimizes a Function -
+        https://blog.regehr.org/archives/1603</li>
+        <li>Life of an instruction in LLVM -
+        http://eli.thegreenplace.net/2012/11/24/life-of-an-instruction-in-llvm
+        <ul>
+        <li>Life of an instruction in Clang / LLVM -
+        https://github.com/thegameg/llvm-life/</li>
+        </ul></li>
+        <li>LLVM - Chris Lattner, The Architecture of Open Source
+        Applications - http://www.aosabook.org/en/llvm.html</li>
+        <li>LLVM Tutorial: Kaleidoscope - http://llvm.org/docs/tutorial/
+        <ul>
+        <li>Haskell version: http://www.stephendiehl.com/llvm/</li>
+        </ul></li>
+        <li>LLVM for Grad Students -
+        http://adriansampson.net/blog/llvm.html</li>
+        <li>Testing LLVM - http://blog.regehr.org/archives/1450</li>
+        <li>Tutorial: Creating an LLVM Backend for the Cpu0 Architecture
+        - https://jonathan2251.github.io/lbd/</li>
+        <li>Tutorial: Creating an LLVM Toolchain for the Cpu0
+        Architecture - http://jonathan2251.github.io/lbt/</li>
+        </ul>
+        <hr />
+        <h1 id="conferences">Conferences</h1>
+        <p>Compilers Call For Papers for Conferences, Workshops and
+        Journals at WikiCFP -
+        http://www.wikicfp.com/cfp/call?conference=compilers</p>
+        <ul>
+        <li>ASPLOS: International Conference on Architectural Support
+        for Programming Languages and Operating Systems -
+        https://asplos-conference.org/ -
+        http://dblp.uni-trier.de/db/conf/asplos/</li>
+        <li>CASES: Compilers, Architecture, and Synthesis for Embedded
+        Systems - http://www.esweek.org/cases -
+        http://dblp.uni-trier.de/db/conf/cases/</li>
+        <li>CC: The International Conference on Compiler Construction -
+        http://conf.researchr.org/series/CC -
+        http://dblp.uni-trier.de/db/conf/cc/</li>
+        <li>CGO: International Symposium on Code Generation and
+        Optimization - http://cgo.org/ -
+        http://dblp.uni-trier.de/db/conf/cgo/</li>
+        <li>HPCA: International Symposium on High-Performance Computer
+        Architecture - https://www.hpca-conf.org/ -
+        http://dblp.uni-trier.de/db/conf/hpca/</li>
+        <li>ICFP: International Conference on Functional Programming -
+        http://icfpconference.org/ -
+        http://dblp.uni-trier.de/db/conf/icfp/</li>
+        <li>ISMM: International Symposium on Memory Management -
+        http://www.sigplan.org/Conferences/ISMM/ -
+        http://dblp.uni-trier.de/db/conf/iwmm/</li>
+        <li>LCTES: Languages, Compilers, and Tools for Embedded Systems
+        - https://conf.researchr.org/series/LCTES -
+        http://dblp.uni-trier.de/db/conf/lctrts/</li>
+        <li>OOPSLA: Object-Oriented Programming Systems, Languages and
+        Applications - http://www.sigplan.org/Conferences/OOPSLA/ -
+        http://www.oopsla.org/ -
+        http://dblp.uni-trier.de/db/conf/oopsla/</li>
+        <li>PACT: International Conference on Parallel Architecture and
+        Compilation - http://pactconf.org/ -
+        http://dblp.uni-trier.de/db/conf/IEEEpact/</li>
+        <li>PLDI: Programming Language Design and Implementation -
+        http://www.sigplan.org/Conferences/PLDI/ -
+        http://dblp.uni-trier.de/db/conf/pldi/</li>
+        <li>POPL: Principles of Programming Languages -
+        http://www.sigplan.org/Conferences/POPL/ -
+        http://dblp.uni-trier.de/db/conf/popl/</li>
+        <li>PPoPP: ACM SIGPLAN Symposium on Principles and Practice of
+        Parallel Programming - http://www.sigplan.org/Conferences/PPOPP/
+        - http://dblp.uni-trier.de/db/conf/ppopp/</li>
+        <li>SAS: International Static Analysis Symposium -
+        http://www.staticanalysis.org/ -
+        http://dblp.uni-trier.de/db/conf/sas/</li>
+        <li>SCOPES: International Workshop on Software and Compilers for
+        Embedded Systems - https://scopesconf.org/ -
+        http://dblp.uni-trier.de/db/conf/scopes/</li>
+        </ul>
+        <hr />
+        <h1 id="courses">Courses</h1>
+        <ul>
+        <li>Cornell CS 6120: Advanced Compilers
+        <ul>
+        <li>Fall 2020; Adrian Sampson
+        <ul>
+        <li>The Self-Guided Online Course:
+        https://www.cs.cornell.edu/courses/cs6120/2020fa/self-guided/</li>
+        <li>https://www.cs.cornell.edu/courses/cs6120/2020fa/</li>
+        <li>source code: https://github.com/sampsyo/cs6120</li>
+        <li>lectures:
+        https://www.cs.cornell.edu/courses/cs6120/2020fa/lesson/
+        <ul>
+        <li>https://vod.video.cornell.edu/channel/CS%2B6120/179754792</li>
+        <li>https://cornell.app.box.com/s/wb3387ebfbte9btx3weekmc8nij5glep</li>
+        </ul></li>
+        </ul></li>
+        </ul></li>
+        <li>IIT Delhi COL874: Advanced Compiler Techniques
+        <ul>
+        <li>2020-2021; Sorav Bansal</li>
+        <li>https://iitd.github.io/col874/</li>
+        <li>Lectures:
+        https://www.youtube.com/playlist?list=PLf3ZkSCyj1tf3rPAkOKY5hUzDrDoekAc7</li>
+        <li>Meetings:
+        https://www.youtube.com/playlist?list=PLf3ZkSCyj1tfCb_3bPAaWKtrcFHS0xRdn</li>
+        </ul></li>
+        <li>IU P423/P523: Compilers (Programming Language
+        Implementation)
+        <ul>
+        <li>Fall 2020; Jeremy Siek</li>
+        <li>https://iucompilercourse.github.io/IU-P423-P523-E313-E513-Fall-2020/</li>
+        <li>https://github.com/IUCompilerCourse/IU-P423-P523-E313-E513-Fall-2020</li>
+        <li>https://github.com/IUCompilerCourse/Essentials-of-Compilation</li>
+        </ul></li>
+        <li>KAIST CS420: Compiler Design
+        <ul>
+        <li>Spring 2020; Jeehoon Kang
+        <ul>
+        <li>https://github.com/kaist-cp/cs420</li>
+        <li>https://www.youtube.com/playlist?list=PL5aMzERQ_OZ8RWqn-XiZLXm1IJuaQbXp0</li>
+        </ul></li>
+        <li>KECC: KAIST Educational C Compiler
+        <ul>
+        <li>https://github.com/kaist-cp/kecc-public</li>
+        </ul></li>
+        </ul></li>
+        <li>NPTEL: Compiler Design
+        <ul>
+        <li>2011; Y.N. Srikant
+        <ul>
+        <li>https://nptel.ac.in/courses/106108052/</li>
+        <li>https://www.youtube.com/playlist?list=PL3690D679B876DE6A</li>
+        </ul></li>
+        </ul></li>
+        <li>SFU CMPT 886: Program Analysis and Reliability - Nick
+        Sumner, Spring 2015
+        <ul>
+        <li>Playlist:
+        https://www.youtube.com/playlist?list=PLNC6lmsIySCOPjY8IwKBtD2cqe-MMgIGM</li>
+        <li>Schedule &amp; Slides:
+        http://www.cs.sfu.ca/~wsumner/teaching/886/15/schedule.html</li>
+        </ul></li>
+        <li>Stanford OpenEdX: Compilers - Alex Aiken
+        <ul>
+        <li>http://online.stanford.edu/course/compilers-0</li>
+        </ul></li>
+        <li>UCB CS294-113: Virtual Machines and Managed Runtimes
+        <ul>
+        <li>http://www.wolczko.com/CS294/</li>
+        <li>A Concise and Opinionated History of Virtual Machines
+        <ul>
+        <li><a href="https://soft-dev.org/events/vmss16/">Virtual
+        Machines Summer School 2016</a></li>
+        <li>https://archive.org/download/vmss16/wolczko.pdf</li>
+        <li>https://www.youtube.com/watch?v=QnQYhrpX39M</li>
+        </ul></li>
+        </ul></li>
+        <li>UCSD CSE 131: Compiler Construction
+        <ul>
+        <li>Fall 2019; Joseph Gibbs Politz
+        <ul>
+        <li>https://ucsd-cse131-f19.github.io/</li>
+        <li>https://podcast.ucsd.edu/watch/fa19/cse131_a00</li>
+        </ul></li>
+        <li>Winter 2018; Ranjit Jhala
+        <ul>
+        <li>https://ucsd-progsys.github.io/131-web/</li>
+        <li>https://podcast.ucsd.edu/watch/wi18/cse131_a00</li>
+        </ul></li>
+        </ul></li>
+        <li>UCSD CSE 231: Advanced Compiler Design
+        <ul>
+        <li>Winter 2019; Sorin Lerner
+        <ul>
+        <li>https://podcast.ucsd.edu/watch/wi19/cse231_a00</li>
+        <li>https://ucsd-pl.github.io/cse231/wi19/</li>
+        </ul></li>
+        </ul></li>
+        <li>UFMG DCC888: Static Program Analysis
+        <ul>
+        <li>2020; Fernando Magno Quintão Pereira</li>
+        <li>https://homepages.dcc.ufmg.br/~fernando/classes/dcc888/</li>
+        <li>https://www.youtube.com/playlist?list=PLC-dUCVQghfdu7AG5f_p4oRyKgjDuoAWU</li>
+        </ul></li>
+        <li>University of Utah: Advanced Compilers - John Regehr
+        <ul>
+        <li>Weeks 1 and 2: http://blog.regehr.org/archives/1419</li>
+        <li>Weeks 3-5: http://blog.regehr.org/archives/1428</li>
+        </ul></li>
+        <li>UW CSE CSEP 501: Compilers - Hal Perkins
+        <ul>
+        <li>https://courses.cs.washington.edu/courses/csep501/</li>
+        <li>Winter 2018
+        <ul>
+        <li>Homepage:
+        https://courses.cs.washington.edu/courses/csep501/18sp/</li>
+        <li>Lecture Videos:
+        https://courses.cs.washington.edu/courses/csep501/18sp/video/</li>
+        </ul></li>
+        <li>Winter 2016
+        <ul>
+        <li>Homepage:
+        https://courses.cs.washington.edu/courses/csep501/16wi/</li>
+        <li>Playlist:
+        https://www.youtube.com/playlist?list=PLTPQEx-31JXhfAWGnGzwbfhB2zUB7Jd4C</li>
+        <li>Topics:
+        https://courses.cs.washington.edu/courses/csep501/16wi/calendar/lecturelist.html</li>
+        </ul></li>
+        </ul></li>
+        </ul>
+        <hr />
+        <h1 id="cross-compilation">Cross-compilation</h1>
+        <ul>
+        <li>GCC and Clang compiler drivers and cross compilation -
+        http://maskray.me/blog/2021-03-28-compiler-driver-and-cross-compilation</li>
+        <li>How to cross compile with LLVM based tools
+        <ul>
+        <li>FOSDEM 2018; Peter Smith</li>
+        <li>https://archive.fosdem.org/2018/schedule/event/crosscompile/</li>
+        </ul></li>
+        </ul>
+        <hr />
+        <h1 id="implementations">Implementations</h1>
+        <ul>
+        <li>List of Online C++ Compilers -
+        https://arnemertz.github.io/online-compilers/</li>
+        <li>LLVM
+        <ul>
+        <li>http://llvm.org/</li>
+        <li>LLVM Developers’ Meeting - http://llvm.org/devmtg/</li>
+        <li>http://blog.llvm.org/</li>
+        <li>http://llvmweekly.org/</li>
+        <li>Clang: a C language family frontend for LLVM
+        <ul>
+        <li>http://clang.llvm.org/</li>
+        </ul></li>
+        </ul></li>
+        <li>GCC (GNU Compiler Collection)
+        <ul>
+        <li>https://gcc.gnu.org/</li>
+        <li>GNU Tools Cauldron - https://gcc.gnu.org/wiki#Events</li>
+        <li>https://twitter.com/gnutools/</li>
+        </ul></li>
+        <li>Visual C++ - https://www.visualstudio.com/vs/cplusplus/
+        <ul>
+        <li>https://devblogs.microsoft.com/cppblog/</li>
+        </ul></li>
+        </ul>
+        <h2 id="detection">Detection</h2>
+        <ul>
+        <li>Pre-defined Compiler Macros
+        <ul>
+        <li>https://github.com/cpredef/predef</li>
+        <li>https://sourceforge.net/p/predef/wiki/</li>
+        <li>Architectures -
+        https://sourceforge.net/p/predef/wiki/Architectures/</li>
+        <li>Compilers -
+        https://sourceforge.net/p/predef/wiki/Compilers/</li>
+        <li>Endianness -
+        https://sourceforge.net/p/predef/wiki/Endianness/</li>
+        <li>Language Standards -
+        https://sourceforge.net/p/predef/wiki/Standards/</li>
+        <li>Operating Systems -
+        https://sourceforge.net/p/predef/wiki/OperatingSystems/</li>
+        <li>Standard Libraries -
+        https://sourceforge.net/p/predef/wiki/Libraries/</li>
+        </ul></li>
+        <li>SPY: Friendly Neighborhood C++17 Constexpr Predef Wrapper
+        <ul>
+        <li>OS, compiler, libc, stdlib detection</li>
+        <li>https://github.com/jfalcou/spy</li>
+        </ul></li>
+        </ul>
+        <h2 id="documentation">Documentation</h2>
+        <ul>
+        <li>Clang documentation - http://clang.llvm.org/docs/</li>
+        <li>GCC online documentation - https://gcc.gnu.org/onlinedocs/
+        <ul>
+        <li>GCC Wiki - https://gcc.gnu.org/wiki</li>
+        <li>Cynbe’s GCC Debugging Hints - http://muq.org/~cynbe/gcc/
+        <ul>
+        <li>Debugging Resources -
+        http://muq.org/~cynbe/gcc/offsite-resources.html</li>
+        <li>Comments on the Internals Manual -
+        http://muq.org/~cynbe/gcc/gccint.html</li>
+        </ul></li>
+        </ul></li>
+        <li>LLVM documentation - http://llvm.org/docs/</li>
+        <li>Visual C++ documentation
+        <ul>
+        <li>https://docs.microsoft.com/en-us/cpp/</li>
+        <li>https://github.com/Microsoft/cpp-docs</li>
+        <li>https://docs.microsoft.com/en-us/cpp/visual-cpp-in-visual-studio</li>
+        </ul></li>
+        <li>Security-related flags and options for C compilers
+        <ul>
+        <li>https://airbus-seclab.github.io/c-compiler-security/</li>
+        </ul></li>
+        </ul>
+        <h2 id="sanitizers">Sanitizers</h2>
+        <ul>
+        <li>https://github.com/google/sanitizers
+        <ul>
+        <li>https://github.com/google/sanitizers/wiki</li>
+        </ul></li>
+        </ul>
+        <hr />
+        <h1 id="linking-and-loading">Linking and Loading</h1>
+        <p><strong>See also:</strong></p>
+        <ul>
+        <li><a href="executables.md">Executables</a> - executable &amp;
+        object file formats (<a
+        href="https://github.com/MattPD/cpplinks/blob/master/executables.md#dll">DLL</a>,
+        <a
+        href="https://github.com/MattPD/cpplinks/blob/master/executables.md#elf">ELF</a>,
+        <a
+        href="https://github.com/MattPD/cpplinks/blob/master/executables.md#mach-o">Mach-O</a>,
+        <a
+        href="https://github.com/MattPD/cpplinks/blob/master/executables.md#pe">PE</a>);
+        debugging data formats (<a
+        href="https://github.com/MattPD/cpplinks/blob/master/executables.md#dwarf">DWARF</a>,
+        <a
+        href="https://github.com/MattPD/cpplinks/blob/master/executables.md#pdb-program-database">PDB</a>)
+        <ul>
+        <li><a
+        href="https://github.com/MattPD/cpplinks/blob/master/executables.linking_loading.md">Linking
+        and Loading</a></li>
+        </ul></li>
+        </ul>
+        <hr />
+        <h1 id="optimization">Optimization</h1>
+        <ul>
+        <li>ALIVe: Automatic LLVM InstCombine Verifier
+        <ul>
+        <li>http://rise4fun.com/Alive</li>
+        <li>https://github.com/nunoplopes/alive</li>
+        <li>http://blog.regehr.org/archives/1170</li>
+        <li>https://www.cs.utah.edu/~regehr/papers/pldi15.pdf</li>
+        <li>http://llvm.org/devmtg/2014-10/Slides/Menendez-Alive.pdf</li>
+        </ul></li>
+        <li>Automatic Feedback Directed Optimizer (AutoFDO)
+        <ul>
+        <li>https://gcc.gnu.org/wiki/AutoFDO</li>
+        <li>https://github.com/google/autofdo</li>
+        </ul></li>
+        <li>Compiler Optimizations for Reverse Engineers by Rolf Rolles
+        <ul>
+        <li>http://www.msreverseengineering.com/blog/2014/6/23/compiler-optimizations-for-reverse-engineers</li>
+        <li>http://www.msreverseengineering.com/s/Binary-Literacy-Static-6-Optimizations.ppt</li>
+        </ul></li>
+        <li>Compiler Optimization Options
+        <ul>
+        <li>GCC:
+        https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html</li>
+        <li>Clang:
+        http://clang.llvm.org/docs/CommandGuide/clang.html#cmdoption-O0
+        -
+        https://stackoverflow.com/questions/15548023/clang-optimization-levels</li>
+        <li>Visual C++:
+        https://msdn.microsoft.com/en-us/library/19z1t1wy.aspx</li>
+        </ul></li>
+        <li>Devirtualization in C++ -
+        https://hubicka.blogspot.com/search/label/devirtualization</li>
+        <li>GoingNative 50: New Visual C++ Code Optimizer -
+        https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-50-New-Visual-C-Code-Optimizer</li>
+        <li>Link time optimization (LTO) -
+        https://hubicka.blogspot.com/search/label/link-time%20optimization</li>
+        <li>Optimizations in C++ Compilers: A practical journey
+        <ul>
+        <li>ACM Queue vol. 17, no. 5 (2019)</li>
+        <li>Matt Godbolt</li>
+        <li>https://queue.acm.org/detail.cfm?id=3372264</li>
+        </ul></li>
+        </ul>
+        <h2 id="optimization-superoptimization">Optimization:
+        Superoptimization</h2>
+        <ul>
+        <li>GNU Superoptimizer Version 2 -
+        https://github.com/embecosm/gso2</li>
+        <li>Souper - a superoptimizer for LLVM IR -
+        https://github.com/google/souper</li>
+        <li>Stochastic Superoptimization -
+        http://blog.regehr.org/archives/923</li>
+        <li>STOKE: A stochastic superoptimizer and program synthesizer -
+        http://stoke.stanford.edu -
+        https://github.com/StanfordPL/stoke</li>
+        <li>Superoptimizing Compilers -
+        http://superoptimization.org/wiki/Superoptimizing_Compilers</li>
+        <li>Superoptimization - James Pallister - FOSDEM 2015 -
+        https://archive.fosdem.org/2015/schedule/event/superoptimization/</li>
+        </ul>
+        <h2 id="optimization-talks">Optimization: Talks</h2>
+        <h3 id="optimization-talks-2022">Optimization: Talks: 2022</h3>
+        <ul>
+        <li>What GCC optimization level is best for you?
+        <ul>
+        <li>SUSE Labs Conference 2022</li>
+        <li>Jan Hubicka</li>
+        <li>https://www.youtube.com/watch?v=GufwdypTfrE</li>
+        </ul></li>
+        </ul>
+        <h3 id="optimization-talks-2016">Optimization: Talks: 2016</h3>
+        <ul>
+        <li>STOKE: Search-Based Compiler Optimization
+        <ul>
+        <li>UCI CS Distinguished Lecture; April 29, 2016</li>
+        <li>Alex Aiken</li>
+        <li>https://www.youtube.com/watch?v=rZFeTTFp7x4</li>
+        </ul></li>
+        </ul>
+        <h3 id="optimization-talks-2015">Optimization: Talks: 2015</h3>
+        <ul>
+        <li>Understanding Compiler Optimization
+        <ul>
+        <li>Meeting C++ 2015</li>
+        <li>Chandler Carruth</li>
+        <li>https://www.youtube.com/watch?v=FnGCDLhaxKU</li>
+        </ul></li>
+        <li>Stochastic Optimization for x86 Binaries
+        <ul>
+        <li>Google Tech Talks; January 12, 2015</li>
+        <li>Eric Schkufza</li>
+        <li>https://www.youtube.com/watch?v=aD9mZDJzb58</li>
+        </ul></li>
+        </ul>
+        <h3 id="optimization-talks-2014">Optimization: Talks: 2014</h3>
+        <ul>
+        <li>Superoptimizing LLVM
+        <ul>
+        <li>UW CSE Colloquium; December 2, 2014</li>
+        <li>John Regehr</li>
+        <li>https://www.youtube.com/watch?v=Ux0YnVEaI6A</li>
+        </ul></li>
+        </ul>
+        <hr />
+        <h1 id="talks">Talks</h1>
+        <h2 id="talks-2019">Talks: 2019</h2>
+        <ul>
+        <li>An overview of Clang
+        <ul>
+        <li>2019 LLVM Developers’ Meeting</li>
+        <li>Sven van Haastregt, Anastasia Stulova</li>
+        <li>https://www.youtube.com/watch?v=5kkMpJpIGYU</li>
+        <li>http://llvm.org/devmtg/2019-10/talk-abstracts.html#tut8</li>
+        </ul></li>
+        <li>GCC under the hood
+        <ul>
+        <li>Linaro Connect San Diego 2019</li>
+        <li>Siddhesh Poyarekar</li>
+        <li>https://www.youtube.com/watch?v=brxAm99w8D8</li>
+        <li>https://siddhesh.in/gcc-under-the-hood.pdf</li>
+        <li>https://siddhesh.in/posts/gcc-under-the-hood.html</li>
+        <li>https://linaroconnectsandiego.sched.com/event/SubD/san19-221-gcc-under-the-hood</li>
+        </ul></li>
+        <li>Introduction to LLVM
+        <ul>
+        <li>2019 LLVM Developers’ Meeting</li>
+        <li>Eric Christopher &amp; Johannes Doerfert</li>
+        <li>https://www.youtube.com/watch?v=J5xExRGaIIY</li>
+        </ul></li>
+        </ul>
+        <h2 id="talks-2018">Talks: 2018</h2>
+        <ul>
+        <li>Introduction to LLVM: Building simple program analysis tools
+        and instrumentation
+        <ul>
+        <li>FOSDEM 2018</li>
+        <li>Mike Shah</li>
+        <li>https://fosdem.org/2018/schedule/event/introduction/</li>
+        <li>https://www.youtube.com/watch?v=VKIv_Bkp4pk</li>
+        <li>slides &amp; code: http://www.mshah.io/fosdem18.html</li>
+        </ul></li>
+        </ul>
+        <h2 id="talks-2017">Talks: 2017</h2>
+        <ul>
+        <li>Getting started with LLVM: the TL;DR version
+        <ul>
+        <li>LinaroOrg Connect San Francisco 2017</li>
+        <li>Diana Picus</li>
+        <li>https://connect.linaro.org/resource/sfo17/sfo17-110/</li>
+        </ul></li>
+        <li>LLVM Internals #2
+        <ul>
+        <li>Linaro Connect Budapest 2017</li>
+        <li>Renato Golin, Peter Smith, Diana Picus, Omair Javaid,
+        Adhemerval Zanella</li>
+        <li>http://connect.linaro.org/resource/bud17/bud17-302/</li>
+        </ul></li>
+        </ul>
+        <h2 id="talks-2016">Talks: 2016</h2>
+        <ul>
+        <li>Introduction to LLVM – Projects, Components, Integration,
+        Internals
+        <ul>
+        <li>Linaro Connect Las Vegas 2016</li>
+        <li>Renato Golin</li>
+        <li>http://connect.linaro.org/resource/las16/las16-501/</li>
+        </ul></li>
+        <li>Anders Hejlsberg on Modern Compiler Construction
+        <ul>
+        <li>Channel 9; May 12, 2016</li>
+        <li>Anders Hejlsberg &amp; Seth Juarez</li>
+        <li>https://learn.microsoft.com/en-us/shows/seth-juarez/anders-hejlsberg-on-modern-compiler-construction</li>
+        </ul></li>
+        <li>Compiler Technologies
+        <ul>
+        <li>Northwest C++ Users’ Group; October 15, 2014</li>
+        <li>Jim Hogg</li>
+        <li>http://nwcpp.org/october-2014.html</li>
+        </ul></li>
+        </ul>
+        <h2 id="talks-2013">Talks: 2013</h2>
+        <ul>
+        <li>Compiler Confidential
+        <ul>
+        <li>GoingNative 2013</li>
+        <li>Eric Brumer</li>
+        <li>https://learn.microsoft.com/en-us/shows/goingnative-2013/compiler-confidential</li>
+        <li>https://www.youtube.com/watch?v=qpYdsjMaoRg</li>
+        </ul></li>
+        </ul>
+        <hr />
+        <h1 id="warnings">Warnings</h1>
+        <ul>
+        <li>C/C++/Objective-C compiler warning flags collection and
+        parsers
+        <ul>
+        <li>https://github.com/Barro/compiler-warnings#ccobjective-c-compiler-warning-flags-collection-and-parsers</li>
+        </ul></li>
+        <li>Compiler Options Hardening Guide for C and C++
+        <ul>
+        <li>https://best.openssf.org/Compiler-Hardening-Guides/Compiler-Options-Hardening-Guide-for-C-and-C++.html</li>
+        </ul></li>
+        <li>Compiler Warnings - Ian Lance Taylor -
+        https://www.airs.com/blog/archives/159</li>
+        <li>Diagnostic flags in Clang
+        <ul>
+        <li>https://clang.llvm.org/docs/DiagnosticsReference.html</li>
+        <li>diagtool - clang diagnostics tool
+        <ul>
+        <li>https://clang.llvm.org/docs/CommandGuide/diagtool.html</li>
+        </ul></li>
+        </ul></li>
+        <li>leathers - Warning suppression library (C++) -
+        https://github.com/ruslo/leathers
+        <ul>
+        <li>Warnings list:
+        https://github.com/ruslo/leathers/wiki/List</li>
+        </ul></li>
+        <li>ListCppWarningOptions: A simple Perl script that prints GCC
+        warning options you can apply to C++ code
+        <ul>
+        <li>https://github.com/nkakuev/list-cpp-warning-options</li>
+        </ul></li>
+        <li>Use The Tools Available - Compilers
+        <ul>
+        <li>https://github.com/lefticus/cppbestpractices/blob/master/02-Use_the_Tools_Available.md#compilers</li>
+        </ul></li>
+        <li>Understanding GCC warnings
+        <ul>
+        <li>2019; Martin Sebor</li>
+        <li>https://developers.redhat.com/blog/2019/03/13/understanding-gcc-warnings</li>
+        </ul></li>
+        <li>Useful GCC warning options not enabled by -Wall -Wextra
+        <ul>
+        <li>https://kristerw.blogspot.com/2017/09/useful-gcc-warning-options-not-enabled.html</li>
+        </ul></li>
+        <li>Warning Flags -
+        http://www.iso-9899.info/wiki/WarningFlags</li>
+        <li>Warning Options -
+        https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html</li>
+        </ul>
+    </div>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
